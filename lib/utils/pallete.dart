@@ -37,7 +37,7 @@ class NetflixTheme {
     primaryColor: netflixRed,
     scaffoldBackgroundColor: netflixBlack,
     appBarTheme: const AppBarTheme(
-      backgroundColor: netflixGrey,
+      backgroundColor: netflixBlack,
       titleTextStyle: TextStyle(
         color: netflixWhite,
         fontWeight: FontWeight.bold,

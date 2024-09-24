@@ -13,7 +13,7 @@ class EntryPoint extends StatefulWidget {
 class _EntryPointState extends State<EntryPoint> {
   List screens =  [
     const HomeScreen(),
-    const SearchScreen(),
+     SearchScreen(),
   ];
 
   int _index = 0;

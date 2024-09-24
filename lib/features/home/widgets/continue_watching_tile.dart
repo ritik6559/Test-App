@@ -1,12 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:intern_app/features/details/screens/details_screen.dart';
 
 class ContinueWatchingTile extends StatelessWidget {
-  final Map<String,dynamic> show;
+  final Map<String, dynamic> show;
   const ContinueWatchingTile({super.key, required this.show});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => DetailsScreen(
+              show: show,
+            ),
+          ),
+        );
+      },
       child: Container(
         height: 400,
         width: double.infinity,

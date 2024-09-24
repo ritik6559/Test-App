@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intern_app/features/details/screens/details_screen.dart';
 
 class MovieTile extends StatelessWidget {
   final Map<String, dynamic> show;
@@ -7,23 +8,35 @@ class MovieTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => DetailsScreen(
+              show: show,
+            ),
+          ),
+        );
+      },
       child: Container(
-        height: 400,
+        padding: const EdgeInsets.all(12),
+        height: 500,
         decoration: BoxDecoration(
-          color: Colors.transparent,
-          borderRadius: BorderRadius.circular(20),
+          color: Colors.grey.shade900,
+          borderRadius: BorderRadius.circular(
+            20,
+          ),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SizedBox(
-              height: 250,
+              height: 220,
               width: double.infinity,
               child: show['image'] == null
                   ? Image.asset('assets/tv.jpeg')
                   : Image.network(
                       show['image']['medium'],
-                      fit: BoxFit.cover,
+                      fit: BoxFit.contain,
                     ),
             ),
             const SizedBox(
