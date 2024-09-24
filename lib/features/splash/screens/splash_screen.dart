@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:intern_app/features/home/screens/home_screen.dart';
+import 'package:intern_app/features/home/screens/entry_point.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -55,7 +55,7 @@ class _SplashScreenState extends State<SplashScreen>
   Route _createRoute() {
     return PageRouteBuilder(
       pageBuilder: (context, animation, secondaryAnimation) =>
-          const HomeScreen(),
+          const EntryPoint(),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
         const begin = 0.0;
         const end = 1.0;
