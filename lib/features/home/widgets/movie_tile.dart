@@ -30,7 +30,7 @@ class MovieTile extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SizedBox(
-              height: 220,
+              height: 205,
               width: double.infinity,
               child: show['image'] == null
                   ? Image.asset('assets/tv.jpeg')
